@@ -4,12 +4,12 @@ public class DiscountCalculator {
 
     public double calculate(double price, boolean isStudent) {
         if (price < 0) {
-            throw new IllegalArgumentException("El precio no puede ser negativo");
+            return 0;
         } else{
             if (isStudent) {
-                price = price - (price * 0.2)
+                price = price - (price * 0.2);
             } else {
-                price = price - (price * 0.05)
+                price = price - (price * 0.05);
             }
         }
         return price;
